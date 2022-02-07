@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  server1:
+    image: verma99ankush/jenkins-build-repo:latest
+    ports:
+      - "5000:3000"
+  server2:
+    image: verma99ankush/jenkins-build-repo:latest
+    ports:
+      - "5001:3000"     
+  
+
