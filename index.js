@@ -1,13 +1,26 @@
-var express= require('express');
-var app = express();
+const express = require('express')
+const app = express()
+const port = 3000
 
-app.get('/', function (req,res) {
-  res.send('Hey!, this is a demo commit for testing');
-});
+var os = require('os')
+var hostname = os.hostname();
 
-var server = app.listen(3000, function () {
-  var host =server.address().address;
-  var port =server.address().port;
-  
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+var pid = process.pid;
+
+const appVersion = "4.0";
+
+app.get('/', (req, res) => {
+
+  var msg = `<h1>Hello World!</h1>
+   <h2>
+    Process ID: ${pid} <br> 
+    Running on: ${hostname} <br>
+    App Version: ${appVersion}
+   </h2>`
+
+  res.send(msg)
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
