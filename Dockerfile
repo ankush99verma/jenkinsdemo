@@ -15,4 +15,4 @@ ADD . /app
 WORKDIR /lib/systemd/system/
 ADD nodeapp.service /lib/systemd/system/ 
 EXPOSE 3000
-CMD systemctl start nodeapp
+CMD service start nodeapp
