@@ -14,4 +14,4 @@ WORKDIR /app
 ADD . /app
 COPY ./nodeapp.service /lib/systemd/system/nodeapp.service 
 EXPOSE 3000
-CMD service start nodeapp
+CMD service nodeapp start 
