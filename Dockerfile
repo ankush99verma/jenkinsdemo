@@ -1,4 +1,4 @@
-From ubuntu:latest
+FROM ubuntu:latest
 WORKDIR /app
 ADD . /app
 ADD /app/nodeapp.service /lib/systemd/system/ 
