@@ -1,0 +1,14 @@
+[Unit]
+Description=DevOps DEMO NodeJS App
+Documentation=https://github.com/ankush99verma/jenkinsdemo.git
+After=network.target
+
+[Service]
+Type=simple
+
+WorkingDirectory=/app
+ExecStart=/usr/bin/node /app/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
