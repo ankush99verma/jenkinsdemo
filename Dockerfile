@@ -1,6 +1,8 @@
-From node:4.6
+From ubuntu:latest
 WORKDIR /app
 ADD . /app
+ADD /app/nodeapp.service /lib/systemd/system/ 
 RUN npm install
+RUN npm init
 EXPOSE 3000
-CMD npm start
+CMD sudo systemctl start nodeapp
