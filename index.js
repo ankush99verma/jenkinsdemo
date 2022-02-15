@@ -11,7 +11,7 @@ const appVersion = "4.0";
 
 app.get('/', (req, res) => {
 
-  var msg = `<h1>Hello World!, this is a demo commit</h1>
+  var msg = `<h1>Hello World!, this is a test commit</h1>
    <h2>
     Process ID: ${pid} <br> 
     Running on: ${hostname} <br>
